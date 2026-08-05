@@ -1,0 +1,330 @@
+.page {
+  padding: 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+  color: var(--text);
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  padding: 18px 28px;
+  border-bottom: 1px solid rgba(221, 226, 238, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: var(--shadow-soft);
+}
+
+.navbar .brand {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-h);
+  letter-spacing: -0.03em;
+}
+
+.navbar .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.navbar .links a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease;
+}
+
+.navbar .links a:hover,
+.navbar .links a.active {
+  background: var(--surface-muted);
+  transform: translateY(-1px);
+}
+
+.navbar .links a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar .links a:hover {
+  background: var(--surface-muted);
+  transform: translateY(-1px);
+}
+
+.navbar .actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.role-label {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.btn-logout {
+  border: 1px solid rgba(91, 108, 255, 0.18);
+  background: #fff;
+  color: var(--text-h);
+  padding: 11px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-logout:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.dashboard-page .dashboard-hero,
+.listings-page .page-header,
+.profile-page .page-header,
+.auth-page .auth-card,
+.notification-card,
+.card {
+  background: var(--surface);
+  border: 1px solid rgba(221, 226, 238, 0.9);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.dashboard-page .dashboard-hero,
+.listings-page .page-header,
+.profile-page .page-header,
+.auth-page .auth-card {
+  padding: 32px;
+}
+
+.dashboard-grid,
+.card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.dashboard-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.page-header h1,
+.page-header h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 2.4vw, 2.4rem);
+  color: var(--text-h);
+}
+
+.page-header p {
+  margin: 0;
+  color: #5e6f88;
+  max-width: 720px;
+}
+
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-height: 170px;
+  padding: 28px;
+  color: var(--text-h);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.dashboard-card h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.dashboard-card p {
+  color: #6e7d99;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid rgba(221, 226, 238, 0.9);
+  border-radius: var(--radius-sm);
+  padding: 22px;
+  text-align: left;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--text-h);
+}
+
+.auth-page {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 80px);
+}
+
+.auth-card {
+  width: min(100%, 460px);
+}
+
+.auth-card form {
+  display: grid;
+  gap: 18px;
+}
+
+.auth-card label {
+  display: grid;
+  gap: 8px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(221, 226, 238, 0.9);
+  border-radius: 14px;
+  background: var(--surface-muted);
+  color: var(--text-h);
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+  border-color: var(--accent);
+  background: #fff;
+}
+
+.auth-card button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.auth-card button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 36px rgba(91, 108, 255, 0.18);
+}
+
+.status-message,
+.error-message {
+  padding: 16px 18px;
+  border-radius: 16px;
+}
+
+.status-message {
+  background: rgba(91, 108, 255, 0.08);
+  color: var(--text-h);
+  border: 1px solid rgba(91, 108, 255, 0.14);
+}
+
+.error-message {
+  background: #fff1f1;
+  color: #9b1c1c;
+  border: 1px solid #f5c2c2;
+}
+
+.status-message {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.error-message {
+  background: #ffe7e7;
+  color: #9b1c1c;
+}
+
+.profile-card {
+  display: grid;
+  gap: 18px;
+}
+
+.profile-card div {
+  background: var(--surface);
+  border: 1px solid rgba(221, 226, 238, 0.9);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: left;
+}
+
+@media (max-width: 820px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .navbar .links {
+    justify-content: center;
+  }
+
+  .page {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 540px) {
+  .navbar {
+    padding: 18px 18px;
+  }
+
+  .auth-card,
+  .page {
+    padding: 16px;
+  }
+}
