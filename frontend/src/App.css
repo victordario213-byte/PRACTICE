@@ -9,7 +9,7 @@
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
   padding: 18px 28px;
-  border-bottom: 1px solid rgba(221, 226, 238, 0.8);
+  border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,8 +80,8 @@
 }
 
 .btn-logout {
-  border: 1px solid rgba(91, 108, 255, 0.18);
-  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, black 70%);
+  background: var(--surface);
   color: var(--text-h);
   padding: 11px 16px;
   border-radius: 14px;
@@ -103,7 +103,7 @@
 .notification-card,
 .card {
   background: var(--surface);
-  border: 1px solid rgba(221, 226, 238, 0.9);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
   margin-bottom: 24px;
@@ -148,7 +148,7 @@
 
 .page-header p {
   margin: 0;
-  color: #5e6f88;
+  color: color-mix(in srgb, var(--text) 60%, black 10%);
   max-width: 720px;
 }
 
@@ -228,7 +228,7 @@
 .auth-card select {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid rgba(221, 226, 238, 0.9);
+  border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--surface-muted);
   color: var(--text-h);
@@ -245,7 +245,7 @@
 
 .auth-card button {
   background: var(--accent);
-  color: #fff;
+  color: #0a0a0a;
   border: none;
   padding: 14px 18px;
   border-radius: 14px;
@@ -258,7 +258,7 @@
 
 .auth-card button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 18px 36px rgba(91, 108, 255, 0.18);
+  box-shadow: 0 18px 36px color-mix(in srgb, var(--accent) 30%, black 70%);
 }
 
 .status-message,
@@ -268,9 +268,9 @@
 }
 
 .status-message {
-  background: rgba(91, 108, 255, 0.08);
-  color: var(--text-h);
-  border: 1px solid rgba(91, 108, 255, 0.14);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--accent-bg);
 }
 
 .error-message {
