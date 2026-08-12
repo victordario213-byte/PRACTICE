@@ -20,8 +20,14 @@ function AppRoutes() {
     <BrowserRouter>
       {isAuthenticated && <NavBar user={user} onLogout={clearAuth} />}
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route
+          path="/login"
+          element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <Login />}
+        />
+        <Route
+          path="/register"
+          element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <Register />}
+        />
         <Route
           path="/dashboard"
           element={
